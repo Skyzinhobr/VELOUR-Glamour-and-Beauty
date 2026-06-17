@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VELOUR — Beauty & Glamour</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">VELOUR</span>
+  <ul class="nav-links">
+    <li><a href="#categorias">Categorias</a></li>
+    <li><a href="#produtos">Produtos</a></li>
+    <li><a href="#novidades">Novidades</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="cart-btn" onclick="toggleCart()">
+      🛍 Sacola
+      <span class="cart-count" id="cartCount">0</span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-orb orb1"></div>
+  <div class="hero-orb orb2"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">✦ Nova Coleção Chegou</p>
+    <h1 class="hero-title">Beleza que<br/><em>te define</em>,<br/>não te cobre.</h1>
+    <p class="hero-sub">Maquiagens de luxo que realçam quem você já é. Das sombras mais intensas ao glow perfeito — tudo numa experiência só.</p>
+    <div class="hero-ctas">
+      <button class="btn-primary" onclick="document.getElementById('produtos').scrollIntoView({behavior:'smooth'})">Explorar coleção</button>
+      <button class="btn-outline">Ver novidades ✦</button>
+    </div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker" id="ticker"></div>
+</div>
+
+<!-- CATEGORIAS -->
+<section id="categorias">
+  <p class="section-label">✦ Universo Velour</p>
+  <h2 class="section-title">Explore por<br/>categoria</h2>
+  <div class="cats-grid" id="catsGrid"></div>
+</section>
+
+<!-- PRODUTOS -->
+<section id="produtos" style="background: rgba(0,0,0,0.2);">
+  <div class="products-header">
+    <div>
+      <p class="section-label">✦ Bestsellers</p>
+      <h2 class="section-title">Mais desejados</h2>
+    </div>
+    <div class="filter-tabs" id="filterTabs"></div>
+  </div>
+  <div class="products-grid" id="productsGrid"></div>
+</section>
+
+<!-- PROMO BANNER -->
+<div class="promo-banner">
+  <div class="promo-text">
+    <p class="promo-label">✦ Oferta especial</p>
+    <h2 class="promo-headline">20% off na<br/>primeira compra</h2>
+    <p class="promo-desc">Use o código <strong>VELOUR20</strong> no checkout.<br/>Frete grátis em compras acima de R$ 150.</p>
+    <button class="btn-primary" style="margin-top:1.5rem">Aproveitar agora</button>
+  </div>
+  <div class="promo-emojis">💄✨🌸</div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">VELOUR</div>
+      <p class="footer-desc">Maquiagens e cuidados que celebram sua identidade. Beleza sem padrão, com muito glamour.</p>
+      <div class="socials" style="margin-top:1.2rem">
+        <a class="social-btn" href="#">📸</a>
+        <a class="social-btn" href="#">🎵</a>
+        <a class="social-btn" href="#">📌</a>
+        <a class="social-btn" href="#">▶️</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Comprar</h4>
+      <a href="#">Novidades</a>
+      <a href="#">Bestsellers</a>
+      <a href="#">Promoções</a>
+      <a href="#">Kits</a>
+    </div>
+    <div class="footer-col">
+      <h4>Ajuda</h4>
+      <a href="#">Meu pedido</a>
+      <a href="#">Trocas & devoluções</a>
+      <a href="#">Frete</a>
+      <a href="#">Contato</a>
+    </div>
+    <div class="footer-col">
+      <h4>Velour</h4>
+      <a href="#">Nossa história</a>
+      <a href="#">Sustentabilidade</a>
+      <a href="#">Blog de beleza</a>
+      <a href="#">Afiliadas</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Velour Beauty. Todos os direitos reservados.</span>
+    <span>Feito com 💜 e muito glitter</span>
+  </div>
+</footer>
+
+<!-- CART OVERLAY + DRAWER -->
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-head">
+    <span class="cart-title">Minha Sacola</span>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody"></div>
+  <div class="cart-foot" id="cartFoot" style="display:none">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="subtotalVal">R$ 0,00</span></div>
+    <div class="cart-subtotal"><span>Frete</span><span id="freightVal">—</span></div>
+    <div class="cart-total"><span>Total</span><span id="totalVal">R$ 0,00</span></div>
+    <button class="checkout-btn">Finalizar compra →</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
