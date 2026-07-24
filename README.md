@@ -393,7 +393,7 @@ Não é necessário instalar dependências ou utilizar servidor local.
 
 # 👨‍💻 Autor
 
-Projeto desenvolvido por **[Seu Nome]** para a disciplina de **Programação Web**.
+Projeto desenvolvido por **Flávio Sousa Lima** para a disciplina de **Programação Web**.
 
 ---
 
